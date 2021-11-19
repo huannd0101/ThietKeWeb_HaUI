@@ -6,3 +6,4 @@
 
 - Zalo: 0375417808.
 
+- Có chút thay đổi lại cho gọn, add thêm giải các đề ktra 2021
