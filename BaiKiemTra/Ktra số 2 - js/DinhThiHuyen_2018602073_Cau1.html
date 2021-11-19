@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinhThiHuyen_2018602073_Câu1</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("bg3.jpg");
+            background-position: center;
+            background-size: auto;
+        }
+        .container {
+            width: 400px;
+            position: relative;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .form-floating {
+            display: flex;
+            margin: 7px 0;
+        }
+        label {
+            width: 150px;
+        }
+        .group-btn {
+            justify-content: center;
+        }
+        * {margin: 0; padding: 0; outline: none;}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+        <form action="">
+            <div class="form-floating">
+                <label for="">Họ và tên</label>
+                <input type="text" name="" id="fullname" placeholder="Nhập họ và tên">
+            </div>
+            <div class="form-floating">
+                <label for="">Mật khẩu</label>
+                <input type="password" name="" id="pass" placeholder="*********">
+            </div>
+            <div class="form-floating">
+                <label for="">Khẳng định mật khẩu</label>
+                <input type="password" name="" id="passAgain" placeholder="*********">
+            </div>
+            <div class="form-floating">
+                <label for="">Ngày tháng năm sinh</label>
+                <input type="date" name="" id="birthday">
+            </div>
+            <div class="form-floating">
+                <label for="">Số điện thoại</label>
+                <input type="text" name="" id="phone" placeholder="0388625691">
+            </div>
+            <div class="form-floating">
+                <label for="">Đường dẫn ảnh</label>
+                <input type="file" name="" id="mutipart">
+            </div>
+            <div class="form-floating group-btn">
+                <button type="button" onclick="myF()"> Đăng ký </button>
+                <input type="reset" value="Hủy bỏ">
+            </div>
+        </form>
+    </div>
+
+    <script src="DinhThiHuyen_2018602073.js"></script>
+</body>
+</html>
