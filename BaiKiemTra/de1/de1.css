@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.header,
+.footer {
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+.content {
+  display: flex;
+}
+.content .left {
+  width: 20%;
+}
+.content .right {
+  width: 80%;
+}
+.content .left ul {
+}
+.content .left ul > li {
+  background-color: rgb(172, 35, 49);
+  padding: 7px 5px;
+  position: relative;
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+.content .left ul > li:hover {
+  background-color: red;
+}
+.content .left ul > li:hover > a {
+  color: yellow;
+}
+.content .left ul > li > a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.content .left ul > li > .submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  display: none;
+}
+.content .left ul > li:hover > .submenu {
+  display: block;
+}
+
+.right form {
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  background-color: blue;
+  padding: 10px 0;
+  margin-top: 10px;
+  color: white;
+}
+.right form .form-floating {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.right form .form-floating label {
+  width: 150px;
+}
+.right form .form-floating input {
+}
+input[type="button"] {
+  margin-top: 5px;
+}
