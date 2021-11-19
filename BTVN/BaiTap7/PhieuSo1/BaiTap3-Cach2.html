@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    
+    <img src="pic_bulboff.gif" alt="" id="flat" onclick="myF()" />
+
+
+
+    <script>
+      let flat = document.getElementById("flat");
+
+      let cnt = 1;
+      function myF() {
+        if (cnt % 2 == 0) {
+          flat.src = "pic_bulboff.gif";
+        } else {
+          flat.src = "pic_bulbon.gif";
+        }
+        cnt++;
+      }
+    </script>
+  </body>
+</html> -->
+
+<!-- Cách 3 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <img src="pic_bulboff.gif" alt="" id="flat" />
+
+    <script>
+      let flat = document.getElementById("flat");
+
+      let cnt = 1;
+      flat.addEventListener("click", () => {
+        if (cnt % 2 == 0) {
+          flat.src = "pic_bulboff.gif";
+        } else {
+          flat.src = "pic_bulbon.gif";
+        }
+        cnt++;
+      });
+    </script>
+  </body>
+</html>

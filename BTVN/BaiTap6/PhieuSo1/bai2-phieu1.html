@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 2 - phiếu 1</title>
+</head>
+<body>
+    <button onclick="x(1)">1</button>
+    <button onclick="x(2)">2</button>
+    <button onclick="x(3)">3</button>
+    <button onclick="x(4)">4</button>
+    <button onclick="x(5)">5</button>
+    <button onclick="plus()">+</button> <br>
+    <button onclick="x(6)">6</button>
+    <button onclick="x(7)">7</button>
+    <button onclick="x(8)">8</button>
+    <button onclick="x(9)">9</button>
+    <button onclick="x(0)">0</button>
+    <button onclick="Tinh()">=</button> <br>
+    
+    <span>This is result: </span>
+    <span id="demo" style="color: red; font-size: 20px;"></span>
+
+
+    <script>
+        var sum = 0;
+        var a = 0;
+        function x(b){
+            a = b;
+        }
+
+        function plus(){
+            sum += a;
+        }
+
+        function Tinh(){
+            var kq = document.getElementById("demo");
+            kq.textContent = sum + a;
+            sum = 0;
+            a = 0;
+        }
+    </script>
+</body>
+</html>

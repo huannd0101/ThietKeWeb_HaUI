@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 1 - Phiếu 1</title>
+    <style>
+        .form-group {
+            display: flex;
+        }
+        label {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="">Tiêu đề</label>
+            <input type="text" name="" id="" required> 
+        </div>
+        <div class="form-group">
+            <label for="">Người nhận</label> 
+            <input type="text" name="" id="" required>
+        </div>
+        <div class="form-group">
+            <label for="">File đính kèm</label> 
+            <input type="text" name="" id="fileDinhKem" required> 
+        </div>
+        <div class="form-group">
+            <label for="">Nội dung</label> 
+            <textarea name="" id="" cols="30" rows="5" required></textarea> 
+        </div>
+            <input type="reset" value="Hủy">
+            <input type="submit" value="Gửi đi" onclick="myFunction()">
+    </form>
+    
+
+    <script>
+        function myFunction(){
+            var regex = /^[a-zA-Z:*-]+$/;
+            if(regex.test(document.getElementById('fileDinhKem').value)){
+                alert("Thành công");
+            }else {
+                alert("Thất bại");
+            }
+        }
+    </script>
+</body>
+</html>

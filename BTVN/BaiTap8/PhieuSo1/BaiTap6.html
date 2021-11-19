@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6 - Phiếu 1</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+    <script>
+        var st = "Java thật vi diệu";
+        // var st = "học Java thật vi diệu";
+        var test = "Java";
+        st = st.trim();
+        var arr = st.split(" ");
+        if(test == arr[0])
+            text = "Chuỗi bắt đầu bằng Java";
+        else 
+            text = "Chuỗi không bắt đầu bằng Java";
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

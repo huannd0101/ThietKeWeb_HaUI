@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - phiếu 2</title>
+</head>
+<body>
+    <p>Giải phương trình bậc 2: ax<sup>2</sup> + bx + c = 0</p>
+    <form name="formPTB2">
+        Nhập a = <input type="text" name="a"> <br>
+        Nhập b = <input type="text" name="b"> <br>
+        Nhập c = <input type="text" name="c"> <br>
+        <input type="reset" value="Reset">
+    </form>
+    <button onclick="myFunction()">Result</button>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction(){
+            var txt = "";
+            var tmp = document.getElementsByTagName("input");
+            var a = parseFloat(tmp[0].value);
+            var b = parseFloat(tmp[1].value);
+            var c = parseFloat(tmp[2].value);
+            if(a == 0)
+                if(b == 0 && c == 0)
+                    txt = "Phương trình vô nghiệm";
+                else if(b == 0 && c != 0)
+                    txt = "Phương trình vô số nghiệm";
+                else 
+                    txt = "Phương trình bậc nhất với x = " + (-c / b);
+            else{
+                var del = Math.pow(b, 2) - 4 * a * c;
+                if(del < 0)
+                    txt = "Phương trình vô nghiệm";
+                else if(del == 0)
+                    txt = "Phương trình có 1 nghiệm kép <br> x = " + (-b / (2 * a));
+                else {
+                    var x1 = (-b - Math.sqrt(del)) / (2 * a);
+                    var x2 = (-b + Math.sqrt(del)) / (2 * a);
+                    txt = "Phương trình có 2 nghiệm phân biệt <br>x1 = " + x1 + "<br>x2 = " + x2;
+                } 
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+</body>
+</html>

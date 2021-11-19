@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4 - Phiếu 1</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        function DaoNguoc(str){
+            var tmp = "";
+            for(var i = str.length - 1; i >= 0; i--)
+                tmp += str[i];
+            return tmp;
+        }
+
+        var st = "hello world";
+        document.getElementById("demo").innerHTML = "Chuỗi ban đầu là: " + st + "<br>Chuỗi sau khi đảo ngược là: " + DaoNguoc(st);
+    </script>
+</body>
+</html>

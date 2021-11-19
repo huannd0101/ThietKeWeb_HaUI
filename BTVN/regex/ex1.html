@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-group {
+            display: flex;
+        }
+        label {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form name="nhap">
+        <div class="form-group">
+            <label for="">Tên đăng nhập: </label>
+            <input type="text" name="" id="" required>
+        </div>
+        <div class="form-group">
+            <label for="">Mật khẩu: </label>
+            <input type="password" name="" id="" required>
+        </div>
+        <div class="form-group">
+            <label for="">Giới tính: </label>
+            <input type="radio" name="gt" id="" required> Nam 
+            <input type="radio" name="gt" id="" required> Nữ
+        </div>
+        <div class="form-group">
+            <label for="">Số điện thoại: </label>
+            <input type="text" name="phoneNumber" id="" required>
+        </div>
+        <div class="form-group">
+            <label for="">Giới thiệu: </label>
+            <textarea name="" id="" cols="15" rows="3"></textarea>
+        </div>
+        <input type="submit" value="Đăng ký" onclick="myFunction()">
+        <input type="reset" value="Hủy bỏ">
+    </form>
+
+    <script>
+        function myFunction(){
+            var regex = /^[0-9.-|]+$/;
+            if(regex.test(document.nhap.phoneNumber.value)){
+                alert("Thành công");
+            }else {
+                alert("Thất bại");
+            }
+        }
+    </script>
+
+</body>
+</html>

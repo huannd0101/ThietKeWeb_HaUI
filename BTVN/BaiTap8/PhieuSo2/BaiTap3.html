@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 - Phiếu 2</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        var st = "I love You";
+        var text = "";
+        for(var i = 0; i < st.length; i++){
+            if(st[i] >= "A" && st[i] <= "Z")
+                text += st[i].toLowerCase();
+            else 
+                text += st[i].toUpperCase();
+        }
+
+        document.getElementById("demo").innerHTML = "Chuỗi ban đầu: " + st + "<br>Chuỗi lúc sau: " + text;
+    </script>
+</body>
+</html>

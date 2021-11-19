@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 - Phiếu 1</title>
+</head>
+<body>
+    <p id="debai"></p>
+    <p id="demo"></p>
+
+
+    <script>
+        var arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        var n = arr1.length;
+        
+        
+        function Count(a, n, x){
+            var tmp = 0;
+            for(var i = 0; i < n; i++)
+                if(a[i] == x)
+                    tmp++;
+            return tmp;
+        }
+
+        function XuLy(a, n){
+            var text = "";
+            var tmp1, tmp = Count(a, n, a[0]), index = 0;
+            for(var i = 1; i < n; i++){
+                tmp1 = Count(a, n, a[i]);
+                if(tmp1 > tmp){
+                    index = i;
+                    tmp = tmp1;
+                }
+            }
+
+            a.sort();
+            
+            for(var i = n; i >= 0; i--){
+                if(Count(a, n, a[i]) > 1 && a[i] != a[i - 1]){
+                    text +=" " + a[i] + "(" + Count(arr1, n, arr1[i]) + " times)";  
+                }
+            }
+            return text;
+        }
+        document.getElementById("debai").innerHTML = "Ta có mảng: " + arr1;
+        document.getElementById("demo").innerHTML = XuLy(arr1, n);
+    </script>
+</body>
+</html>

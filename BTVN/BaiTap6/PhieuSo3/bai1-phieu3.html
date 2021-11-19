@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 1 - phiếu 3</title>
+</head>
+<body>
+    <p>Phương trình bậc nhất 2 ẩn</p>
+    <p>
+        ax + by = c <br>
+        a'x + b'y = c'
+    </p>
+
+    <form>
+        Nhập a = <input type="text"><br>
+        Nhập b = <input type="text"><br>
+        Nhập c = <input type="text"><br>
+        Nhập a' = <input type="text"><br>
+        Nhập b' = <input type="text"><br>
+        Nhập c' = <input type="text">
+    </form>
+
+    <button onclick="Tinh()">Kết quả</button> <br>
+    <span>This is the result: </span>
+    <span id="demo"></span>
+
+    <script>
+        
+        function Tinh(){
+            var tmp = document.getElementsByTagName("input");
+            var a = parseFloat(tmp[0].value);
+            var b = parseFloat(tmp[1].value);
+            var c = parseFloat(tmp[2].value);
+            var d = parseFloat(tmp[3].value);
+            var e = parseFloat(tmp[4].value);
+            var f = parseFloat(tmp[5].value);
+
+            var D = a * e - b * d;
+            var Dx = c * e - b * f;
+            var Dy = a * f - c * d;
+
+            var txt = "";
+            if(D == 0){
+                if(Dx + Dy == 0)
+                    txt = "Hệ phương trình có vô số nghiệm";
+                else 
+                    txt = "Hệ phương trình vô nghiệm";
+            }else{
+                var x = Dx / D;
+                var y = Dy / D;
+                txt = "<br>x = " + x + "<br>y = " + y;
+            }
+
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+</body>
+</html>

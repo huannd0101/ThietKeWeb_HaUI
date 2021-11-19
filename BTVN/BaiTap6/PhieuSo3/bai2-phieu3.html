@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - phiếu 2</title>
+</head>
+<body>
+    <p>Hãy nhập số vào hộp text (từ 1 đến 10)</p>
+    <input type="text">
+    <input type="submit" value="Submit" onclick="Check()">
+
+    <p id="demo"></p>
+    <script>
+        function Check(){
+            var tmp = document.getElementsByTagName("input");
+            var x = tmp[0].value;
+            var kt = true;
+            
+            if(parseInt(x) > 0 && parseInt(x) <= 10)
+                document.getElementById("demo").innerHTML = "Dữ liệu đúng";
+            else
+            document.getElementById("demo").innerHTML = "Dữ liệu không đúng"; 
+        }
+    </script>
+</body>
+</html>

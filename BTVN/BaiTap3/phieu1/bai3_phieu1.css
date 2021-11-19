@@ -1,0 +1,29 @@
+@charset "utf-8";
+h1 {
+	color: #ff3399;
+	background-color: #fecffd;
+	text-align: center;
+}
+
+div{
+	background-color: #ffffcc;
+	text-align: center;	
+	font-style: italic;
+}
+
+.p1 {
+	color: blue;
+}
+
+.p2 {
+	color: red;	
+}
+
+.p3 {
+	color:  green;	
+}
+
+hr {
+	width: 50%;	
+}
+

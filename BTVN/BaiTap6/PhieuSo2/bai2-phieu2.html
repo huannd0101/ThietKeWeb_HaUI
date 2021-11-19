@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 2 - phiếu 2</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="button" value="1" onclick="x(1)"></td>
+            <td><input type="button" value="2" onclick="x(2)"></td>
+            <td><input type="button" value="3" onclick="x(3)"></td>
+            <td><input type="button" value="4" onclick="x(4)"></td>
+            <td><input type="button" value="5" onclick="x(5)"></td>
+            <td><input type="button" value="-" onclick="sub()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="6" onclick="x(6)"></td>
+            <td><input type="button" value="7" onclick="x(7)"></td>
+            <td><input type="button" value="8" onclick="x(8)"></td>
+            <td><input type="button" value="9" onclick="x(9)"></td>
+            <td><input type="button" value="0" onclick="x(0)"></td>
+            <td><input type="button" value="=" onclick="tinh()"></td>
+        </tr>
+    </table>
+    <span>This is the result: </span>
+    <span style="color: red; font-size: 20px;" id="demo"></span>
+    <script>
+        var tru = 0;
+        var a = 0;
+        function x(b){
+            a = b;
+        }
+
+        function sub(){
+            tru += a;
+        }
+        
+        function tinh(){
+            var kq = document.getElementById("demo");
+            kq.textContent = tru - a;
+            tru = 0;
+            a = 0;
+        }
+    </script>
+</body>
+</html>

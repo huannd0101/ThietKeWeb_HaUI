@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Phiếu 3</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        var array1 = [1, 0, 2, 3, 4];
+        var array2 = [3, 5, 6, 7, 8, 13];
+        var test = [];
+
+        var lenMin =  Math.min(array1.length, array2.length);
+        var lenMax =  Math.max(array1.length, array2.length);
+    
+        for(var i = 0; i < lenMin; i++){
+            test[i] = array1[i] + array2[i];
+        }
+
+        for(var i = lenMin; i < lenMax; i++){
+            if(lenMin == array1.length)
+                test[i] = array2[i];
+            else 
+                test[i] = array1[i];
+        }
+
+        document.getElementById("demo").innerHTML = "[" + test + "]";
+    </script>
+</body>
+</html>

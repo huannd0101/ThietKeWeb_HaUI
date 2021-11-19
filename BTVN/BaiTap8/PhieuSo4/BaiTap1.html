@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Phiếu 4</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        var array1 = [1,2,3,4,1,2,2,1];
+        var MAX = 0;
+        var Count = 0;
+        var test = [];
+        var j = 0;
+        var text = "Mảng ban đầu là: " + array1;
+        array1.sort();
+        
+        for(var i = 0; i < array1.length - 1; i++){
+            if(array1[i] == array1[i + 1]){
+                Count++;
+            }else {
+                MAX = (MAX > Count) ? MAX : Count;
+                Count = 0;
+            }
+        }
+   
+        for(var i = 0; i < array1.length - 1; i++){
+            if(array1[i] == array1[i + 1]){
+                Count++;
+            }else {
+                if(Count == MAX)
+                    test[j++] = array1[i];
+                Count = 0;
+            }
+        }
+        text += "<br>Số lặp lại nhiều nhất trong mảng là:  [" + test + "]";
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

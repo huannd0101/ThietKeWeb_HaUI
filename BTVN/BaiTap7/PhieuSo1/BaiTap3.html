@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 - Phiếu 1</title>
+    <style>
+        div {
+            display: flex;
+        }
+        div #img1 {
+            position: absolute;
+        }
+        div #img2 {
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="myFunction()">
+        <img  src="pic_bulboff.gif" alt="" id="img1">
+        <img  src="pic_bulbon.gif" alt="" id="img2">
+    </div>
+
+    <script>
+        var check = true;
+        function myFunction(){
+            if(check){
+                document.getElementById("img1").style.zIndex = -1;
+                document.getElementById("img2").style.zIndex = 1;
+                check = false;
+            }else{
+                document.getElementById("img1").style.zIndex = 1;
+                document.getElementById("img2").style.zIndex = -1;
+                check = true;
+            }
+        }
+    </script>
+</body>
+</html>

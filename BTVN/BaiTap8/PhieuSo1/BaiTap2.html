@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - phiếu 1</title>
+    
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        var arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        var n = arr1.length;
+        function Count(a, n, x){
+            var tmp = 0;
+            for(var i = 0; i < n; i++){
+                if(a[i] == x)
+                    tmp++;
+            }
+            return tmp;
+        }  
+
+        function XuLy(a, n){
+            var tmp1, tmp = Count(a, n, a[0]), index = 0;
+            for(var i = 1; i < n; i++){
+                tmp1 = Count(a, n, a[i]);
+                if(tmp < tmp1){
+                    tmp = tmp1;
+                    index = i;
+                }
+            }
+            return a[index] + " " + "(" + Count(arr1, n, arr1[index]) + " times)";
+        }
+
+        document.getElementById("demo").innerHTML = "Kết quả: " + XuLy(arr1, n);
+    </script>
+</body>
+</html>

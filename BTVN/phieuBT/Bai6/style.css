@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    height: 120px;
+}
+img.imgHeader {
+    width: 100%;
+    height: 100%;
+}
+section {}
+section nav {
+    height: 40px;
+    margin: 30px 0 30px 30px;
+}
+section nav ul.menu {
+    list-style: none;
+    position: relative;
+    display: flex;
+}
+section nav ul.menu > li {
+    /* float: left; */
+    
+    background: blue;
+    border-left: 1px dotted black;
+}
+section nav ul.menu > li:hover {
+    background: red;
+}
+li > a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    line-height: 40px;
+}
+section nav ul.menu > li .sub-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+section nav ul.menu > li:hover .sub-menu {
+    display: block;
+}
+section nav ul.menu > li .sub-menu li{
+   
+}
+section nav ul.menu > li .sub-menu li a{
+    
+}

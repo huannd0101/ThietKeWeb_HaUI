@@ -1,0 +1,29 @@
+@charset "utf-8";
+*{
+	padding: 0;
+	marign: 0;
+	box-sizing: border-box;	
+	font-family: Tahoma;
+}
+
+body {
+	background-color: #a06d21;
+}
+
+section {
+	background-image: url(bg.jpg);	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+}
+
+h2 {
+	color: yellow;	
+	text-align: center;
+}
+
+p {
+	color: white;	
+}
+
+

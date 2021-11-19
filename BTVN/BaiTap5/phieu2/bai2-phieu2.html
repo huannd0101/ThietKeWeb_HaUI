@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - Phiếu 2</title>
+</head>
+<body>
+    <button onclick="bam(1)">1</button>
+    <button onclick="bam(2)">2</button>
+    <button onclick="bam(3)">3</button>
+    <button onclick="bam(4)">4</button>
+    <button onclick="bam(5)">5</button>
+    <button onclick="plus()">+</button>
+    <br>
+    <button onclick="bam(6)">6</button>
+    <button onclick="bam(7)">7</button>
+    <button onclick="bam(8)">8</button>
+    <button onclick="bam(9)">9</button>
+    <button onclick="bam(0)">0</button>
+    <button onclick="tinh()">=</button>
+    <br>
+    <span>Đây là kết quả: </span>
+    <span style="color: red; " id="result"></span>
+
+
+    <script>
+        var sum = 0;
+        var a = 0;
+        function bam(x){
+            a = x;
+        }
+        function tinh(){
+            var kq = document.getElementById("result");
+            kq.textContent = sum + a;
+            sum = 0;
+            a = 0;
+        }
+        function plus(){
+            sum += a;
+        }
+    </script>
+</body>
+</html>

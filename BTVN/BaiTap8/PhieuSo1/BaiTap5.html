@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5 - Phiếu 1</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        var st = "hello world";
+        
+        function UpperCase(str){
+            var text = "";
+            var arr = str.split(" ");
+            for(var i = 0; i < arr.length; i++){
+                text += arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
+                if(i < arr.length - 1)
+                    text += " ";
+            }
+            return text;
+        }
+
+        document.getElementById("demo").innerHTML = "Chuỗi ban đầu là: " + st + "<br>Chuỗi sau khi viết hoa chũ cái đầu cả từng câu là: " + UpperCase(st);
+    </script>
+</body>
+</html>

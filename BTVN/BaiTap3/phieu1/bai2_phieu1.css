@@ -1,0 +1,20 @@
+@charset "utf-8";
+body{
+	background-color: #ffd2ff;
+}
+
+h1 {
+	text-align: center;
+	color: #4caf50;	
+	text-transform: uppercase;
+}
+
+p {
+	text-align: justify;
+	text-indent: 50px;
+	letter-spacing: 3px;
+}
+
+a {
+	text-decoration: none;
+}

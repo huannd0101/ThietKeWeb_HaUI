@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bài 1 - Phiếu 2</title>
+</head>
+
+<body>
+	<p>Giải phương trình bậc 2 với a = 4, b = 6, c = 2</p>
+    <p>Nhấn để xem kết quả </p>
+    <button onclick="myFunction()">Click here</button>
+    <p id="demo"></p>
+    
+    
+    <script>
+    	function myFunction(){
+			var a = 4;
+			var b = 6; 
+			var c = 2;
+			var x1, x2;
+			var del = b * b - 4 * a * c;
+			x1 = (-b - sqrt(del)) / (2 * a);
+			x2 = (-b + sqrt(del)) / (2 * a);	
+
+			document.getElementById("demo").innerHTML = "123huan";
+		}
+		
+    </script>
+</body>
+</html>

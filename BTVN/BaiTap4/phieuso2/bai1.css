@@ -1,0 +1,14 @@
+h1 {
+    background-color: orange;
+    box-shadow: 0 3px black;
+}
+table {
+    border-collapse: collapse;
+}
+table, td, th {
+    border: 1px solid orangered;
+}
+th {
+    background-color: orange;
+    color: white;
+}

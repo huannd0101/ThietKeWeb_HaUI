@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bài 1 - Phiếu 1</title>
+</head>
+<body>
+    Ngày tháng năm sinh:
+    
+    Ngày <select name="day" id="day"> </select>
+    Tháng <select name="month" id="month"></select>
+    Năm <select name="year" id="year"></select>
+    
+    <script>
+        var selectDay = document.getElementById("day");
+        var selectMonth = document.getElementById("month");
+        var selectYear = document.getElementById("year");
+
+        for(var i = 1; i <= 31; i++){
+            var x = document.createElement("option");
+            x.value = i;
+            x.textContent = i;
+            selectDay.appendChild(x);
+        }
+
+        for(var i = 1; i <= 12; i++){
+            var option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            selectMonth.appendChild(option);
+        }
+
+        for(var i = 1900; i <= 2020; i++){
+            var option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            selectYear.appendChild(option);
+        }
+    </script>
+</body>
+</html>

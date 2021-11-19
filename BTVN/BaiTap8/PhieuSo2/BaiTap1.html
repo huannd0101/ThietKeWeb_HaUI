@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Phiếu 2</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+
+    <script>
+        var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        var name1 = ["th","st", "nd", "rd"];
+        var text = "";
+        for(var i = 0; i < color.length; i++){
+            if(i < 4)
+                text += "\"" + (i + 1) + name1[i] + " " + color[i] + ".\"<br>"
+            else 
+                text += "\"" + (i + 1) + name1[3] + " " + color[i] + ".\"<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

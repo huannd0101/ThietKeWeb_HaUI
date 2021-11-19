@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2 - Phiếu 2</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        function SoSanh(str){
+            var CountH = 0, CountA = 0;
+            for(var i = 0; i < str.length; i++)
+                if(str[i] == "h")
+                    CountH++;
+                else if(str[i] == "a")
+                    CountA++;
+            if(CountH == CountA)
+                return "Chuỗi: " + str + "<br>h xuất hiện " + CountH + " lần, a xuất hiện " + CountA + " lần vậy số lượng bằng nhau";
+            else 
+                return "Chuỗi: " + str + "<br>h xuất hiện " + CountH + " lần, a xuất hiện " + CountA + " lần vậy số lượng không bằng nhau";
+        }
+
+        var st = "học Java thật vi diệu";
+    
+        document.getElementById("demo").innerHTML = SoSanh(st);
+    </script>
+</body>
+</html>

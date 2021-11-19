@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Phiếu 3</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: blue;
+        }
+        .box3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1" onmousemove="mouseOver1(this)"></div>
+        <div class="box box2" onmousemove="mouseOver2(this)"></div>
+        <div class="box box3" onmousemove="mouseOver3(this)"></div>
+    </div>
+
+
+    <script>
+        function mouseOver1(obj){
+           obj.style.background = "green";
+        }
+        function mouseOver2(obj){
+           obj.style.background = "red";
+        }
+        function mouseOver3(obj){
+           obj.style.background = "blue";
+        }
+    </script>
+</body>
+</html>
